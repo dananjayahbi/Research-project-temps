@@ -1,2 +1,5 @@
 efficientnet_b2_emotion_model.pth
 adaptive_efficientnetv2_rw_s_emotion_model.pth
+requirements.txt
+my_custom_package
+wheelhouse
