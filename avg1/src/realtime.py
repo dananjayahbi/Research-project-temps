@@ -1,10 +1,11 @@
 # src/realtime.py
 
-import cv2
 import os
+import json
+import cv2
 import time
-from PIL import Image, ImageTk
 import numpy as np
+from PIL import Image, ImageTk
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 from emotion_detector import EmotionDetector
@@ -231,8 +232,12 @@ class App:
         Updates the aggregated text label and all chart pairs.
         """
         # Update aggregated text label
-        text = "Aggregated Emotion Confidence (Last Window):\n"
-        for emotion, value in aggregated_dict.items():
+        with open("emotion_data.json", "r") as file:
+            data = json.load(file)
+
+        latest_entry = data[-1]
+        text = f"Latest Aggregated Emotions (Time: {latest_entry['timestamp']}):\n"
+        for emotion, value in latest_entry["aggregated_emotions"].items():
             text += f"{emotion}: {value * 100:.2f}%\n"
         self.aggregated_label.config(text=text)
         
