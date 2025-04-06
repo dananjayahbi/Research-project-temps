@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Classification Report</title>
+<style>
+  body {
+    background-color: #ffffff; /* White background */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    min-width: 600px;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  td:first-child {
+    text-align: left;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h2>Classification Report</h2>
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>F1-Score</th>
+    <th>Support</th>
+  </tr>
+  <tr>
+    <td>Anger</td>
+    <td>0.8095</td>
+    <td>0.8267</td>
+    <td>0.8180</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Disgust</td>
+    <td>0.8758</td>
+    <td>0.8556</td>
+    <td>0.8656</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Fear</td>
+    <td>0.7991</td>
+    <td>0.7969</td>
+    <td>0.7980</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Happy</td>
+    <td>0.9878</td>
+    <td>0.9851</td>
+    <td>0.9864</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>0.9108</td>
+    <td>0.9351</td>
+    <td>0.9228</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Sad</td>
+    <td>0.8026</td>
+    <td>0.7631</td>
+    <td>0.7823</td>
+    <td>2216</td>
+  </tr>
+  <tr>
+    <td>Surprise</td>
+    <td>0.8505</td>
+    <td>0.8755</td>
+    <td>0.8628</td>
+    <td>2216</td>
+  </tr>
+  <!-- Accuracy row (merged columns for a scikit-learn style look) -->
+  <tr>
+    <td colspan="3" style="text-align:right;">accuracy</td>
+    <td>0.8626</td>
+    <td>15512</td>
+  </tr>
+  <tr>
+    <td>macro avg</td>
+    <td>0.8623</td>
+    <td>0.8626</td>
+    <td>0.8626</td>
+    <td>15512</td>
+  </tr>
+  <tr>
+    <td>weighted avg</td>
+    <td>0.8623</td>
+    <td>0.8626</td>
+    <td>0.8626</td>
+    <td>15512</td>
+  </tr>
+</table>
+
+</body>
+</html>
